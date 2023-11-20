@@ -1,0 +1,147 @@
+:root {
+    --primary-color: rgba(243, 243, 247, 1);
+    --secondary-color: rgba(107, 91, 129, 1);
+    --accent-color: rgba(174, 174, 230, 1);
+    --dark-primary-color: rgba(28, 28, 28, 1);
+    --dark-contrast-color: rgba(28, 13, 34);
+    --main-font: 'Roboto Slab', serif;
+    --secondary-font: 'Courier Prime', mono space;
+}
+
+/*Main Styling*/
+
+.brandName {
+    font-family: var(--main-font);
+    color: var(--accent-color);
+    font-size: 25px;
+}
+
+.navBarLinks {
+  font-family: var(--main-font);
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+body {
+    background: linear-gradient(110deg, var(--primary-color), var(--accent-color));
+}
+
+.mainContainer {
+    display: block;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+.searchBar {
+    text-align: center;
+}
+
+.lyricIpt {
+    font-family: var(--main-font);
+    margin: 0;
+    text-align: center;
+    color: var(--dark-contrast-color);
+    border: 1px solid var(--dark-contrast-color);
+    max-width: 720px;
+}
+
+.musicCards {
+  width: 12rem;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.modalBtn {
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+  font-size: 20px;
+  color: var(--accent-color);
+}
+
+.mainHomepageImg {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 650px;
+}
+
+/*Dark Theme Styling*/
+.themeBtn {
+    border: 1px solid var(--dark-contrast-color);
+    border-radius: 4px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+    transition: all 150ms ease-in-out;
+    font-family: var(--main-font);
+    font-size: 18px;
+  }
+
+  .themeBtn:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .dark {
+    background: linear-gradient(90deg, var(--dark-primary-color) 0%, var(--secondary-color) 100%);
+  }
+  
+  .dark .mainContainer {
+    color: rgb(0, 0, 0);
+  }
+  
+  .dark p {
+    color: var(--primary-color);
+  }
+  
+  .dark a {
+    color: var(--secondary-color);
+  }
+
+/*Media Queries*/
+@media (max-width: 1280px) {
+
+    .mainContainer {
+        max-width: 1200px;
+    }
+
+    .lyricIpt {
+      max-width: 720px;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .mainContainer {
+    max-width: 900px;
+}
+
+.lyricIpt {
+  max-width: 520px;
+}
+
+}
+
+@media (max-width: 767px) {
+  .mainContainer {
+    max-width: 700px;
+}
+
+.lyricIpt {
+  max-width: 320px;
+}
+
+}
+
+@media (max-width: 480px) {
+  .mainContainer {
+    max-width: 400px;
+}
+
+.lyricIpt {
+  max-width: 220px;
+}
+
+}
